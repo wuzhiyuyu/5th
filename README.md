@@ -51,7 +51,7 @@ addEventListener()和removeEventListener()
 myElement.addEventListener('click', functionA);  
 myElement.addEventListener('click', functionB);  
 ```
-事件对象  
+**事件对象**  
 #### 对象  
 一个对象由许多成员组成，可将一个对象作为另一个对象的成员  
 点表示法person.name.first  
@@ -91,10 +91,14 @@ Teacher.prototype.greeting = function() {……}
 ```
 添加新的greeting函数  
 **设置Teacher()原型和构造器引用**  
+```
 Teacher.prototype = Object.create(Person.prototype);  
+```
 create()创建一个和Person.prototype一样的原型属性值，将其所有的属性和方法继承给Teacher.prototype  
 而此时Teacher()的constructor属性是指向Person()的，改变如下：  
+```
 Teacher.prototype.constructor = Teacher;  
+```
 
 
 
